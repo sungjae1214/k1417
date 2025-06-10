@@ -64,6 +64,7 @@ Tool: AI Assistant
     </style>
 </head>
 <body class="antialiased">
+    <!-- Header Section -->
     <header class="bg-[#2A62B6] text-white py-8 px-4 text-center rounded-b-xl shadow-lg">
         <div class="container mx-auto">
             <h1 class="text-3xl md:text-4xl font-bold mb-2">AI 프롬프트, 어떻게 써야 효과적일까?</h1>
@@ -74,6 +75,7 @@ Tool: AI Assistant
     </header>
 
     <main class="container mx-auto p-4 md:p-8 tailwind-override">
+        <!-- Section 1: 조사 동기 및 목적 -->
         <section id="introduction" class="my-8 p-6 rounded-lg shadow-lg bg-white">
             <h2 class="text-2xl font-bold mb-4 text-center">🔍 조사 동기와 목적</h2>
             <div class="prose max-w-none text-gray-700">
@@ -86,6 +88,7 @@ Tool: AI Assistant
             </div>
         </section>
 
+        <!-- Section 2: 조사 계획 -->
         <section id="research-plan" class="my-8 p-6 rounded-lg shadow-lg section-bg-light-blue">
             <h2 class="text-2xl font-bold mb-6 text-center">📊 조사 계획</h2>
             <div class="grid md:grid-cols-3 gap-6 text-center">
@@ -107,21 +110,28 @@ Tool: AI Assistant
             </div>
         </section>
 
+        <!-- Section 3: 설문 조사 결과 -->
         <section id="survey-results" class="my-8 p-6">
             <h2 class="text-2xl font-bold mb-8 text-center">📝 설문으로 알아본 AI 프롬프트 활용법</h2>
             <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <!-- Chart 1: Prompt Specificity Importance -->
+                <!-- Visualization: Chart.js Pie Chart for Survey Question 1 -->
                 <div class="chart-container w-full max-w-md mx-auto h-80 md:h-96">
                     <h3 class="text-lg font-semibold mb-3 text-center">프롬프트 구체성의 중요도</h3>
                     <canvas id="promptSpecificityChart"></canvas>
                     <p class="text-sm text-gray-600 mt-3 text-center">"AI에게 질문할 때, 프롬프트의 구체성이 얼마나 중요하다고 생각하시나요?" (5점 척도)</p>
                 </div>
 
+                <!-- Chart 2: Prompt Modification Method -->
+                <!-- Visualization: Chart.js Horizontal Bar Chart for Survey Question 2 -->
                 <div class="chart-container w-full max-w-md mx-auto h-96 md:h-112 lg:col-span-1">
                      <h3 class="text-lg font-semibold mb-3 text-center">불만족 시 프롬프트 수정 방법</h3>
                     <canvas id="promptModificationChart"></canvas>
                     <p class="text-sm text-gray-600 mt-3 text-center">"만족스럽지 못한 답변을 받았을 때, 프롬프트를 어떻게 수정/개선하는 편인가요?"</p>
                 </div>
 
+                <!-- Chart 3: Considering AI Limitations -->
+                <!-- Visualization: Chart.js Pie Chart for Survey Question 3 -->
                 <div class="chart-container w-full max-w-md mx-auto h-80 md:h-96">
                     <h3 class="text-lg font-semibold mb-3 text-center">AI 한계 고려의 도움 정도</h3>
                     <canvas id="aiLimitationsChart"></canvas>
@@ -154,12 +164,15 @@ Tool: AI Assistant
             </div>
         </section>
 
+        <!-- Section 4: 심층 인터뷰 결과 -->
         <section id="interview-insights" class="my-8 p-6 rounded-lg shadow-lg bg-white">
             <h2 class="text-2xl font-bold mb-8 text-center">💬 학생들의 생생한 AI 활용 이야기</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="card p-6 border-l-4 border-[#2A62B6]">
                     <h3 class="text-xl font-semibold mb-3">김희성 학생</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <!-- Visualization: Student Interview Photo -->
+                    <img src="src/KakaoTalk_20250523_134852786_02.jpg" alt="김희성 학생 인터뷰 사진" class="w-full max-w-xs mx-auto rounded-lg shadow-lg my-4">
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 mt-4">
                         <li>만족스러운 답변 얻기까지 평균 <span class="font-semibold accent-text">약 10분</span> 소요.</li>
                         <li>역사 수행평가 주제 구성 시 <span class="font-semibold accent-text">약 20분</span> 소요, 결과 <span class="font-semibold">매우 만족</span>.</li>
                         <li>프롬프트 방식: 주제 간단 제시 → AI 의견 요청 → 해당 내용 바탕으로 글쓰기 요청.</li>
@@ -168,7 +181,9 @@ Tool: AI Assistant
                 </div>
                 <div class="card p-6 border-l-4 border-[#4ECDC4]">
                     <h3 class="text-xl font-semibold mb-3">박주혁 학생</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <!-- Visualization: Student Interview Photo -->
+                    <img src="src/KakaoTalk_20250523_134852786_01.jpg" alt="박주혁 학생 인터뷰 사진" class="w-full max-w-xs mx-auto rounded-lg shadow-lg my-4">
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 mt-4">
                         <li>AI 초보자에게 조언: <span class="font-semibold accent-text">"최대한 상세하고 구체적으로 작성해야 한다!"</span></li>
                         <li>사례: 로고 디자인 요청 시 스타일, 컬러, 용도 등 세부 정보 입력 → <span class="font-semibold">깔끔하고 원하는 이미지</span> 획득.</li>
                         <li>실수 경험: 여행지 추천 시 지역 미명시 → 불명확한 답변. 지역 명시 후 <span class="font-semibold">유용한 정보 획득</span>.</li>
@@ -181,6 +196,7 @@ Tool: AI Assistant
             </div>
         </section>
 
+        <!-- Section 5: 결론 및 제언 -->
         <section id="conclusion" class="my-8 p-6 rounded-lg shadow-lg section-bg-light-blue">
             <h2 class="text-2xl font-bold mb-6 text-center">💡 결론 및 제언</h2>
             <div class="prose max-w-none text-gray-700">
@@ -191,12 +207,14 @@ Tool: AI Assistant
             </div>
         </section>
 
+        <!-- Section 6: 참고 자료 -->
         <section id="references" class="my-8 p-6 rounded-lg shadow-lg bg-white">
             <h2 class="text-2xl font-bold mb-4 text-center">📚 참고 자료</h2>
             <p class="text-center text-gray-700">Chat GPT, Gemini, Perplexity</p>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer class="text-center py-8 bg-gray-800 text-gray-300 rounded-t-xl">
         <p>&copy; 2025 미림마이스터고등학교 1학년 4반 2조. All rights reserved.</p>
         <p class="text-sm mt-1">본 인포그래픽은 학생 조사 보고서를 기반으로 제작되었습니다.</p>
