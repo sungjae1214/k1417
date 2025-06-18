@@ -12,11 +12,12 @@ Tool: AI Assistant
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* Custom Styles */
+        /* Custom Styles for Readability */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #fdf7fd; /* Supporting Light Plum Background */
             color: #263238;
+            line-height: 1.7; /* Improved line spacing */
         }
         .chart-container {
             position: relative;
@@ -25,7 +26,7 @@ Tool: AI Assistant
             padding: 1.5rem;
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
+        }
         .card {
             background-color: #FFFFFF;
             border-radius: 0.75rem;
@@ -39,6 +40,7 @@ Tool: AI Assistant
         }
         h1, h2, h3 {
             color: #c026d3; /* Primary Plum/Fuchsia for text */
+            letter-spacing: -0.02em; /* Tighter heading spacing */
         }
         .accent-text {
             color: #4ECDC4; /* Secondary Teal */
@@ -53,9 +55,15 @@ Tool: AI Assistant
             padding: 8px;
             font-size: 0.875rem;
         }
-        /* Tailwind CSS 사용자 정의 */
-        .tailwind-override .prose h2 { margin-top: 1.5em; margin-bottom: 0.8em; }
-        .tailwind-override .prose p { margin-top: 0.6em; margin-bottom: 0.6em; }
+        /* Readability enhancements */
+        .readable-content p, .readable-content li {
+            font-size: 1.05rem; /* Slightly larger base font size */
+            color: #374151; /* Softer black for text */
+            line-height: 1.8; /* More generous line height for paragraphs */
+        }
+        .readable-content h3 {
+             font-size: 1.3rem;
+        }
 
         /* Chart.js 툴팁을 위한 스타일 */
         canvasjs-chart-tooltip {
@@ -74,23 +82,23 @@ Tool: AI Assistant
         </div>
     </header>
 
-    <main class="container mx-auto p-4 md:p-8 tailwind-override">
+    <main class="container mx-auto p-4 md:p-8">
         <!-- Section 1: 조사 동기 및 목적 -->
-        <section id="introduction" class="my-12 p-6 rounded-lg shadow-lg bg-white">
-            <h2 class="text-2xl font-bold mb-4 text-center">🔍 조사 동기와 목적</h2>
-            <div class="prose max-w-none text-gray-700">
+        <section id="introduction" class="my-16 p-8 rounded-lg shadow-lg bg-white">
+            <h2 class="text-3xl font-bold mb-6 text-center">1. 조사 동기와 목적</h2>
+            <div class="readable-content max-w-4xl mx-auto">
                 <p>최근 인공지능(AI)의 활용이 급증하면서 학교 현장에서도 AI가 학습 도구로 적극 활용되고 있습니다. 단순 정보 검색을 넘어 글쓰기, 아이디어 발상, 문제 해결 등 다양한 교육 활동에 AI가 사용됨에 따라, 미림마이스터고 1학년 4반 학생들은 실제로 AI를 어떻게 사용하는지, 특히 프롬프트 작성 방식과 그 효과에 대해 깊이 탐구하고자 했습니다.</p>
                 <p>본 조사는 프롬프트의 구체성과 명확성이 AI 응답의 질에 미치는 영향을 분석하여, 향후 AI 활용 수업의 방향을 제시하고 학생들이 더 효과적으로 AI를 활용하도록 돕는 것을 목표로 합니다. 더 나아가 생성형 AI 시대에 요구되는 디지털 리터러시 능력 향상을 위한 기초 자료로 활용될 것입니다.</p>
-                <div class="mt-6 p-4 bg-fuchsia-50 rounded-md border border-fuchsia-200">
-                    <h3 class="text-lg font-semibold text-[#c026d3]">디지털 리터러시란?</h3>
-                    <p class="text-sm">단순히 디지털 도구를 잘 다루는 것을 넘어, 비판적으로 이해하고 정보를 효과적으로 활용하며, 문제 해결이나 창의적 사고를 적용할 수 있는 능력입니다. AI에게 원하는 정보를 얻기 위해 질문을 구조화하거나 반복 조정하는 과정에서 디지털 리터러시가 발휘됩니다.</p>
+                <div class="mt-8 p-6 bg-fuchsia-50 rounded-md border border-fuchsia-200">
+                    <h3 class="text-xl font-semibold text-[#c026d3] mb-2">디지털 리터러시란?</h3>
+                    <p class="text-base">단순히 디지털 도구를 잘 다루는 것을 넘어, 비판적으로 이해하고 정보를 효과적으로 활용하며, 문제 해결이나 창의적 사고를 적용할 수 있는 능력입니다. AI에게 원하는 정보를 얻기 위해 질문을 구조화하거나 반복 조정하는 과정에서 디지털 리터러시가 발휘됩니다.</p>
                 </div>
             </div>
         </section>
 
         <!-- Section 2: 조사 계획 -->
-        <section id="research-plan" class="my-12 p-6 rounded-lg shadow-lg section-bg-light-plum">
-            <h2 class="text-2xl font-bold mb-6 text-center">📊 조사 계획</h2>
+        <section id="research-plan" class="my-16 p-8 rounded-lg shadow-lg section-bg-light-plum">
+            <h2 class="text-3xl font-bold mb-8 text-center">2. 조사 계획</h2>
             <div class="grid md:grid-cols-3 gap-8 text-center">
                 <div class="card p-6">
                     <h3 class="text-xl font-semibold mb-2 accent-text">조사 기간</h3>
@@ -111,42 +119,39 @@ Tool: AI Assistant
         </section>
 
         <!-- Section 3: 설문 조사 결과 -->
-        <section id="survey-results" class="my-12 p-6">
-            <h2 class="text-2xl font-bold mb-8 text-center">📝 설문으로 알아본 AI 프롬프트 활용법</h2>
+        <section id="survey-results" class="my-16 p-8">
+            <h2 class="text-3xl font-bold mb-10 text-center">3. 설문으로 알아본 AI 프롬프트 활용법</h2>
             <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-10 items-start">
                 <!-- Chart 1: Prompt Specificity Importance -->
-                <!-- Visualization: Chart.js Pie Chart for Survey Question 1 -->
                 <div class="chart-container w-full max-w-md mx-auto h-80 md:h-96">
                     <h3 class="text-lg font-semibold mb-3 text-center">"AI에게 질문할 때, 프롬프트의 구체성이 얼마나 중요하다고 생각하시나요?" (5점 척도)</h3>
                     <canvas id="promptSpecificityChart"></canvas>
-                    
                 </div>
 
                 <!-- Chart 2: Prompt Modification Method -->
-                <!-- Visualization: Chart.js Horizontal Bar Chart for Survey Question 2 -->
                 <div class="chart-container w-full max-w-md mx-auto h-96 md:h-112 lg:col-span-1">
                      <h3 class="text-lg font-semibold mb-3 text-center">"만족스럽지 못한 답변을 받았을 때, 프롬프트를 어떻게 수정/개선하는 편인가요?"</h3>
                     <canvas id="promptModificationChart"></canvas>
+                    
                 </div>
 
                 <!-- Chart 3: Considering AI Limitations -->
-                <!-- Visualization: Chart.js Pie Chart for Survey Question 3 -->
                 <div class="chart-container w-full max-w-md mx-auto h-80 md:h-96">
                     <h3 class="text-lg font-semibold mb-3 text-center">"AI의 한계를 고려하여 프롬프트를 작성하는 것이 얼마나 도움이 된다고 생각하시나요?"</h3>
                     <canvas id="aiLimitationsChart"></canvas>
                 </div>
             </div>
 
-            <div class="mt-12 p-6 card section-bg-light-plum">
-                <h3 class="text-xl font-semibold mb-4 text-center text-[#c026d3]">설문 결과 요약</h3>
-                <ul class="list-disc list-inside space-y-3 text-gray-700">
+            <div class="mt-16 p-8 card section-bg-light-plum">
+                <h3 class="text-2xl font-semibold mb-4 text-center text-[#c026d3]">설문 결과 요약</h3>
+                <ul class="list-disc list-inside space-y-3 text-gray-700 readable-content">
                     <li>대부분의 학생들은 AI에게 질문 시 프롬프트의 <span class="font-semibold">구체성이 중요</span>하다고 인식했습니다. (중요 61.1%, 매우 중요 33.3%)</li>
                     <li>만족스럽지 못한 답변을 받았을 때, <span class="font-semibold">질문에 더 자세한 정보나 맥락을 추가</span>하여 수정하는 경향이 뚜렷했습니다. (77.8%)</li>
                     <li>AI가 답변할 수 있는 정보의 범위나 능력에 <span class="font-semibold">한계가 있다는 점을 고려</span>하는 것이 효과적인 답변을 얻는 데 도움이 된다고 다수가 응답했습니다. (도움 50%, 매우 도움 27.8%)</li>
                 </ul>
             </div>
             
-            <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
+            <div class="mt-16 grid md:grid-cols-3 gap-8 text-center">
                 <div class="card flex flex-col justify-center px-6 py-10 bg-[#DDA0DD] text-gray-800">
                     <h4 class="text-2xl lg:text-3xl font-bold">18명 중 16명</h4>
                     <p class="text-base lg:text-lg mt-2">AI 주기적 활용</p>
@@ -163,13 +168,12 @@ Tool: AI Assistant
         </section>
 
         <!-- Section 4: 심층 인터뷰 결과 -->
-        <section id="interview-insights" class="my-12 p-6 rounded-lg shadow-lg bg-white">
-            <h2 class="text-2xl font-bold mb-8 text-center">💬 학생들의 생생한 AI 활용 이야기</h2>
+        <section id="interview-insights" class="my-16 p-8 rounded-lg shadow-lg bg-white">
+            <h2 class="text-3xl font-bold mb-10 text-center">4. 학생들의 생생한 AI 활용 이야기</h2>
             <div class="w-full md:w-5/6 mx-auto">
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="card flex flex-col p-6 border-l-4 border-[#DDA0DD]">
                         <h3 class="text-xl font-semibold mb-3">김희성 학생</h3>
-                        <!-- Visualization: Student Interview Photo -->
                         <img src="src/KakaoTalk_20250523_134852786_02.jpg" alt="김희성 학생 인터뷰 사진" class="w-full max-w-xs mx-auto rounded-lg shadow-lg my-4">
                         <ul class="list-disc list-inside space-y-2 text-gray-700 mt-4">
                             <li>만족스러운 답변 얻기까지 평균 <span class="font-semibold accent-text">약 10분</span> 소요.</li>
@@ -180,7 +184,6 @@ Tool: AI Assistant
                     </div>
                     <div class="card flex flex-col p-6 border-l-4 border-[#4ECDC4]">
                         <h3 class="text-xl font-semibold mb-3 text-[#4ECDC4]">박주혁 학생</h3>
-                        <!-- Visualization: Student Interview Photo -->
                         <img src="src/KakaoTalk_20250523_134852786_01.jpg" alt="박주혁 학생 인터뷰 사진" class="w-full max-w-xs mx-auto rounded-lg shadow-lg my-4">
                         <ul class="list-disc list-inside space-y-2 text-gray-700 mt-4">
                             <li>AI 초보자에게 조언: <span class="font-semibold accent-text">"최대한 상세하고 구체적으로 작성해야 한다!"</span></li>
@@ -192,33 +195,37 @@ Tool: AI Assistant
                 </div>
             </div>
 
-            <!-- Visualization: Combined Interview Word Cloud Infographic -->
-            <div class="mt-12 flex justify-center">
+            <div class="mt-16 flex justify-center">
                 <div class="w-full md:w-2/3">
                     <img src="src/KakaoTalk_20250523_134629507.png" alt="학생 인터뷰 핵심 단어 인포그래픽" class="w-full rounded-lg shadow-lg">
                 </div>
             </div>
 
-             <div class="mt-12 p-4 bg-fuchsia-50 rounded-md text-center">
-                <p class="text-lg font-semibold text-[#c026d3]">💡 핵심 조언: "AI야, 환경 문제 알려줘" 보다는 <span class="text-[#4ECDC4]">"기후 변화로 인한 해수면 상승 원인을 중학생도 이해할 수 있게 설명해줘"</span>처럼 구체적으로 질문하세요!</p>
+             <div class="mt-16 p-6 bg-fuchsia-50 rounded-md text-center">
+                <p class="text-xl font-semibold text-[#c026d3]">💡 핵심 조언: "AI야, 환경 문제 알려줘" 보다는 <span class="text-[#4ECDC4]">"기후 변화로 인한 해수면 상승 원인을 중학생도 이해할 수 있게 설명해줘"</span>처럼 구체적으로 질문하세요!</p>
             </div>
         </section>
 
         <!-- Section 5: 결론 및 제언 -->
-        <section id="conclusion" class="my-12 p-6 rounded-lg shadow-lg section-bg-light-plum">
-            <h2 class="text-2xl font-bold mb-6 text-center">💡 결론 및 제언</h2>
-            <div class="prose max-w-none text-gray-700">
-                <p>본 조사를 통해 미림마이스터고 1학년 4반 학생들은 AI 활용 시 프롬프트의 <span class="font-semibold">구체성과 명확성의 중요성을 인지</span>하고 있으며, AI의 한계를 경험적으로 체감하며 이를 보완하려는 태도를 보였습니다. 학생들은 모호한 질문보다 <span class="font-semibold">구체적이고 상황에 맞는 질문을 하도록 학습</span>하고 있으며, 이는 단순 기능 사용을 넘어 디지털 리터러시와 메타인지 능력을 키우고 있음을 시사합니다.</p>
-                <p>AI가 제공한 정보가 실제와 다르거나 누락된 부분을 스스로 확인하고 수정하는 등, 학생들은 <span class="font-semibold">AI를 비판적으로 사용하는 모습</span>도 보였습니다. 이는 AI와의 상호작용을 통해 사고하고 문제를 해결해나가는 능력이 향상되고 있음을 보여줍니다.</p>
-                <h3 class="text-xl font-semibold mt-6 mb-2 text-[#c026d3]">제언</h3>
-                <p>향후 AI 교육은 단순 기능 습득을 넘어, <span class="font-semibold accent-text">질문 설계 능력, 결과 해석 능력, 그리고 정보 재구성 능력</span>을 기르는 방향으로 나아가야 합니다. 본 조사가 이러한 교육 방향 설정에 실질적인 기초 자료로 활용되기를 기대합니다.</p>
+        <section id="conclusion" class="my-16 p-8 rounded-lg shadow-lg section-bg-light-plum">
+            <h2 class="text-3xl font-bold mb-10 text-center">5. 결론 및 제언</h2>
+            <div class="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto readable-content">
+                <div class="card p-8 border-l-4 border-[#c026d3]">
+                    <h3 class="text-2xl font-semibold mb-4">결론</h3>
+                    <p>본 조사를 통해 학생들은 AI 활용 시 프롬프트의 구체성과 명확성의 중요성을 인지하고 있으며, AI의 한계를 경험적으로 체감하며 이를 보완하려는 태도를 보였습니다. 학생들은 모호한 질문보다 구체적이고 상황에 맞는 질문을 하도록 학습하고 있으며, 이는 단순 기능 사용을 넘어 디지털 리터러시와 메타인지 능력을 키우고 있음을 시사합니다.</p>
+                     <p class="mt-4">또한, AI가 제공한 정보가 실제와 다르거나 누락된 부분을 스스로 확인하고 수정하는 등, 학생들은 AI를 비판적으로 사용하는 모습을 보였습니다. 이는 AI와의 상호작용을 통해 사고하고 문제를 해결해나가는 능력이 향상되고 있음을 보여줍니다.</p>
+                </div>
+                <div class="card p-8 border-l-4 border-[#4ECDC4]">
+                    <h3 class="text-2xl font-semibold mb-4 accent-text">제언</h3>
+                    <p>향후 AI 교육은 단순 기능 습득을 넘어, <span class="font-semibold">질문 설계 능력, 결과 해석 능력, 그리고 정보 재구성 능력</span>을 기르는 방향으로 나아가야 합니다. 본 조사가 이러한 교육 방향 설정에 실질적인 기초 자료로 활용되기를 기대합니다.</p>
+                </div>
             </div>
         </section>
 
         <!-- Section 6: 참고 자료 -->
-        <section id="references" class="my-12 p-6 rounded-lg shadow-lg bg-white">
-            <h2 class="text-2xl font-bold mb-4 text-center">📚 참고 자료</h2>
-            <p class="text-center text-gray-700">Chat GPT, Gemini, Perplexity</p>
+        <section id="references" class="my-16 p-8 rounded-lg shadow-lg bg-white">
+            <h2 class="text-3xl font-bold mb-4 text-center">참고한 자료들</h2>
+            <p class="text-center text-gray-700 text-lg">Chat GPT, Gemini, Perplexity</p>
         </section>
     </main>
 
